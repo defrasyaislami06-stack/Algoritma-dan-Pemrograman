@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Data nilai
+    int kehadiran = 85;
+    int forum = 90;
+    int tugas_individu = 85;
+    int tugas_kelompok = 90;
+    int uts = 88;
+    int uas = 85;
+    int project = 90;
+
+    // Hitung nilai akhir
+    float nilai_akhir = (kehadiran + forum + tugas_individu + tugas_kelompok + uts + uas + project) / 7.0;
+
+    // Tentukan huruf mutu
+    char huruf;
+    if (nilai_akhir >= 85)
+        huruf = 'A';
+    else if (nilai_akhir >= 70)
+        huruf = 'B';
+    else if (nilai_akhir >= 60)
+        huruf = 'C';
+    else if (nilai_akhir >= 50)
+        huruf = 'D';
+    else
+        huruf = 'E';
+
+    // Output
+    cout << "NILAI AKHIR : " << (int)(nilai_akhir + 0.5) << endl;
+    cout << "HURUF MUTU  : " << huruf << endl;
+
+    return 0;
+}

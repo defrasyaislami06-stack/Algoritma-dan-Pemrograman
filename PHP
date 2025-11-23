@@ -1,0 +1,30 @@
+<?php
+// Data nilai
+$kehadiran = 85;
+$forum = 90;
+$tugas_individu = 85;
+$tugas_kelompok = 90;
+$uts = 88;
+$uas = 85;
+$project = 90;
+
+// Hitung nilai akhir (rata-rata)
+$nilai_akhir = ($kehadiran + $forum + $tugas_individu + $tugas_kelompok + $uts + $uas + $project) / 7;
+
+// Menentukan huruf mutu
+if ($nilai_akhir >= 85) {
+    $huruf = 'A';
+} elseif ($nilai_akhir >= 70) {
+    $huruf = 'B';
+} elseif ($nilai_akhir >= 60) {
+    $huruf = 'C';
+} elseif ($nilai_akhir >= 50) {
+    $huruf = 'D';
+} else {
+    $huruf = 'E';
+}
+
+// Output
+echo "NILAI AKHIR : " . round($nilai_akhir) . "\n";
+echo "HURUF MUTU  : " . $huruf . "\n";
+?>
